@@ -6,6 +6,7 @@ import com.wizardlybump17.nosee.implementation.manager.DefaultVanishablePlayerMa
 import com.wizardlybump17.nosee.listener.PlayerJoinListener;
 import com.wizardlybump17.wlib.config.WConfig;
 import lombok.Getter;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -15,13 +16,18 @@ import java.util.Map;
 public class NoSee extends JavaPlugin {
 
     private final VanishablePlayerManager vanishablePlayerManager = new DefaultVanishablePlayerManager();
-
-    private WConfig messagesConfig;
-
     private final Map<String, String> messages = new HashMap<>();
+    private WConfig messagesConfig;
 
     @Override
     public void onEnable() {
+        if (Bukkit.getPluginManager().getPlugin("NoSee") == null
+                || !Bukkit.getPluginManager().isPluginEnabled("NoSee")) {
+            getLogger().severe("WLib not found!");
+            Bukkit.getPluginManager().disablePlugin(this);
+            return;
+        }
+
         new VanishCommand(this);
         new PlayerJoinListener(this);
         messagesConfig = new WConfig(this, "messages.yml", true);
