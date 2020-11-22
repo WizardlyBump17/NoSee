@@ -1,0 +1,8 @@
+name: NoSee
+author: WizardlyBump17
+main: com.wizardlybump17.nosee.NoSee
+version: 2.0.0-SNAPSHOT
+commands:
+  vanish:
+    permission: nosee.vanish
+    aliases: [v]

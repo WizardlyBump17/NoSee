@@ -1,0 +1,8 @@
+name: ${project.artifactId}
+author: WizardlyBump17
+main: com.wizardlybump17.nosee.${project.artifactId}
+version: ${project.version}
+commands:
+  vanish:
+    permission: nosee.vanish
+    aliases: [v]

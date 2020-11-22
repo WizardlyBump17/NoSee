@@ -1,0 +1,12 @@
+vanish:
+  enabled: '&aenabled'
+  disabled: '&cdisabled'
+
+  player: '&aVanish mode {new_status}&a.'
+  target:
+    sender: '&aVanish mode of {target} changed to {new_status}&a.'
+    target: '&a{sender} changed your vanish mode to {new_status}&a.'
+
+  invalid-args: '&eAvailable args: &7set, reload'
+
+reloaded: '&aReloaded messages!'

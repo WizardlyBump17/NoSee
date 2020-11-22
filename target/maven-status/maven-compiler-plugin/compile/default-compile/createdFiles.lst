@@ -1,0 +1,7 @@
+com/wizardlybump17/nosee/api/manager/VanishablePlayerManager.class
+com/wizardlybump17/nosee/implementation/manager/DefaultVanishablePlayerManager.class
+com/wizardlybump17/nosee/NoSee.class
+com/wizardlybump17/nosee/command/VanishCommand.class
+com/wizardlybump17/nosee/api/VanishablePlayer.class
+com/wizardlybump17/nosee/listener/PlayerJoinListener.class
+com/wizardlybump17/nosee/implementation/DefaultVanishablePlayer.class
