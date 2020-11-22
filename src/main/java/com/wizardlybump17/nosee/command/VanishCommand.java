@@ -5,7 +5,6 @@ import com.wizardlybump17.nosee.api.VanishablePlayer;
 import com.wizardlybump17.nosee.api.manager.VanishablePlayerManager;
 import com.wizardlybump17.nosee.implementation.DefaultVanishablePlayer;
 import com.wizardlybump17.wlib.command.WCommand;
-import com.wizardlybump17.wlib.config.WConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -23,7 +22,6 @@ public class VanishCommand extends WCommand {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         NoSee noSee = (NoSee) plugin;
         VanishablePlayerManager vanishablePlayerManager = noSee.getVanishablePlayerManager();
-        WConfig config = noSee.getMessagesConfig();
 
         if (args.length == 0) {
             if (!(sender instanceof Player)) {
@@ -103,7 +101,7 @@ public class VanishCommand extends WCommand {
             }
 
             case "reload": {
-                config.reloadConfig();
+                noSee.reloadMessages();
 
                 sender.sendMessage(noSee.getMessages().get("reloaded"));
                 return true;
