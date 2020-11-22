@@ -21,8 +21,8 @@ public class NoSee extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        if (Bukkit.getPluginManager().getPlugin("NoSee") == null
-                || !Bukkit.getPluginManager().isPluginEnabled("NoSee")) {
+        if (Bukkit.getPluginManager().getPlugin("WLib") == null
+                || !Bukkit.getPluginManager().isPluginEnabled("WLib")) {
             getLogger().severe("WLib not found!");
             Bukkit.getPluginManager().disablePlugin(this);
             return;
